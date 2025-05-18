@@ -31,13 +31,7 @@ export default function PosteosDesdeSheet({ url, base }) {
               />
             )}
             <h3>{p.titulo}</h3>
-            <span className="fecha">
-                {new Date(p.fecha).toLocaleDateString('es-AR', {
-                  day: '2-digit',
-                  month: '2-digit',
-                  year: 'numeric'
-                })}
-            </span>
+            <span className="fecha">{p.fecha}</span>
             <p>{p.contenido.split(' ').slice(0, 30).join(' ')}...</p>
             <p className="autor">Por <strong>{p.autor}</strong></p>
             <Link to={`/${base}/${idx}`} className="leer-mas">Leer más</Link>
