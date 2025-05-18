@@ -1,0 +1,40 @@
+
+.vista-posteo {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Roboto Slab', serif;
+  background: #fff;
+}
+
+.vista-posteo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.vista-posteo .fecha {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.vista-posteo .posteo-img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.vista-posteo .contenido-completo {
+  font-size: 1rem;
+  text-align: justify;
+  color: #333;
+  line-height: 1.6;
+}
+
+.vista-posteo .autor {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}

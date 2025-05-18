@@ -24,7 +24,9 @@ export default function PosteosDesdeSheet({ url }) {
           <article key={idx} className="posteo-card">
             {p.imagen && (
               <img
-                src={p.imagen.startsWith('/public/img/') ? p.imagen : '/public/img/posts' + p.imagen}
+                src={p.imagen.startsWith('/img/') 
+                      ? `${import.meta.env.BASE_URL}${p.imagen.slice(1)}` 
+                      : `${import.meta.env.BASE_URL}img/posts/${p.imagen}`}
                 alt={p.titulo}
                 className="posteo-img"
               />
