@@ -3,19 +3,16 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import './vista-posteo.css'
 
-export default function VistaPosteo() {
+export default function VistaPosteo({ url }) {
   const { id } = useParams()
   const [posteo, setPosteo] = useState(null)
 
   useEffect(() => {
-    fetch('https://script.google.com/macros/s/AKfycbxwKjos7eKqdpY4SDS0qrEZtlNGWl3dM_--b_QKZok3txVffwpCkQPDxbY8QXKsqUzbgQ/exec')
+    fetch(url)
       .then(res => res.json())
-      .then(data => {
-        const match = data[parseInt(id)]
-        setPosteo(match)
-      })
-      .catch(err => console.error('Error al cargar posteo:', err))
-  }, [id])
+      .then(data => setPosteo(data[parseInt(id)]))
+      .catch(err => console.error('Error al cargar:', err))
+  }, [id, url])
 
   if (!posteo) return <p style={{ textAlign: 'center' }}>Cargando...</p>
 
