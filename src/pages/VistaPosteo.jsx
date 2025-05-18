@@ -8,7 +8,7 @@ export default function VistaPosteo() {
   const [posteo, setPosteo] = useState(null)
 
   useEffect(() => {
-    fetch('https://script.google.com/macros/s/AKfycbwF7VNlaxA557V8sK3N0HhHYmwb2YV5SfjILoSaQxByvz_QzzD8xlz_zMJ-f9Y8u9bL/exec')
+    fetch('https://script.google.com/macros/s/AKfycbxwKjos7eKqdpY4SDS0qrEZtlNGWl3dM_--b_QKZok3txVffwpCkQPDxbY8QXKsqUzbgQ/exec')
       .then(res => res.json())
       .then(data => {
         const match = data[parseInt(id)]
