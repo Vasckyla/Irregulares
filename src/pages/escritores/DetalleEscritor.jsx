@@ -30,11 +30,11 @@ const DetalleEscritor = () => {
         <img
           src={entrada.imagen}
           alt={entrada.titulo}
-          className="float-right ml-4 w-20 rounded shadow-sm"
+          className="text-justify float-right ml-4 w-80 rounded shadow-sm"
         />
         <p className="text-gray-800 whitespace-pre-line text-justify">{entrada.contenido}</p>
       </div>
-      <p className="italic text-gray-500 mt-6">por {entrada.autor} | {formatFecha(entrada.fecha)}</p>
+      <p className="text-right italic text-gray-500 mt-6">por {entrada.autor} | {formatFecha(entrada.fecha)}</p>
     </article>
   );
 };

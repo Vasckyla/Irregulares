@@ -30,11 +30,11 @@ const DetalleResena = () => {
         <img
           src={resena.imagen}
           alt={resena.titulo}
-          className="float-right ml-4 w-20 rounded shadow-sm"
+          className="text-justify float-right ml-4 w-80 rounded shadow-sm"
         />
         <p className="text-gray-800 whitespace-pre-line text-justify">{resena.contenido}</p>
       </div>
-      <p className="italic text-gray-500 mt-6">por {resena.autor} | {formatFecha(resena.fecha)}</p>
+      <p className="text-right italic text-gray-500 mt-6">por {resena.autor} | {formatFecha(resena.fecha)}</p>
     </article>
   );
 };
