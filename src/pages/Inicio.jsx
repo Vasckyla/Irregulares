@@ -18,28 +18,24 @@ const Inicio = () => {
   }, []);
 
   return (
-    <div className="space-y-8">
-      <section>
-        <h2 className="text-2xl font-semibold">Última Reseña</h2>
-        {resena ? (
-          <div className="p-4 border rounded">
-            <h3 className="text-xl font-bold">{resena.titulo}</h3>
-            <p className="italic text-sm">por {resena.autor}</p>
-            <p className="mt-2">{resena.resumen}</p>
-          </div>
-        ) : <p>Cargando reseña...</p>}
-      </section>
+    <div className="grid gap-8 max-w-3xl mx-auto mt-8">
+      {resena && (
+        <section className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h2 className="text-2xl font-serif font-semibold border-b pb-2 mb-4">Última Reseña</h2>
+          <h3 className="text-xl font-bold text-gray-800">{resena.titulo}</h3>
+          <p className="text-sm italic text-gray-500 mb-2">por {resena.autor}</p>
+          <p className="text-gray-700">{resena.resumen}</p>
+        </section>
+      )}
 
-      <section>
-        <h2 className="text-2xl font-semibold">Última Publicación de Escritor</h2>
-        {escritor ? (
-          <div className="p-4 border rounded">
-            <h3 className="text-xl font-bold">{escritor.titulo}</h3>
-            <p className="italic text-sm">por {escritor.autor}</p>
-            <p className="mt-2">{escritor.fragmento}</p>
-          </div>
-        ) : <p>Cargando publicación...</p>}
-      </section>
+      {escritor && (
+        <section className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <h2 className="text-2xl font-serif font-semibold border-b pb-2 mb-4">Última Publicación de Escritor</h2>
+          <h3 className="text-xl font-bold text-gray-800">{escritor.titulo}</h3>
+          <p className="text-sm italic text-gray-500 mb-2">por {escritor.autor}</p>
+          <p className="text-gray-700">{escritor.fragmento}</p>
+        </section>
+      )}
     </div>
   );
 };
