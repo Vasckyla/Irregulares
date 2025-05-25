@@ -11,7 +11,7 @@ const DetalleEscritor = () => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const encontrada = data.find(e => e.id === id);
+        const encontrada = data.find(r => String(r.id) === id);
         setEntrada(encontrada);
       });
   }, [id]);

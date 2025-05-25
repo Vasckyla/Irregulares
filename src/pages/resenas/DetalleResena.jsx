@@ -11,7 +11,7 @@ const DetalleResena = () => {
     fetch(url)
       .then(res => res.json())
       .then(data => {
-        const encontrada = data.find(r => r.id === id);
+        const encontrada = data.find(r => String(r.id) === id);
         setResena(encontrada);
       });
   }, [id]);
