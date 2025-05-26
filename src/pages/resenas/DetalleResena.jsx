@@ -30,7 +30,7 @@ const DetalleResena = () => {
         <img
           src={resena.imagen}
           alt={resena.titulo}
-          className="text-justify float-right ml-4 w-80 rounded shadow-sm"
+          className="text-justify float-left ml-4 h-60 rounded shadow-sm"
         />
         <p className="text-gray-800 whitespace-pre-line text-justify">{resena.contenido}</p>
       </div>
