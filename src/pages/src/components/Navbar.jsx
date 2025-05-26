@@ -7,10 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md px-6 py-4 sticky top-0 z-20">
       <div className="flex justify-between items-center">
-        <div className="text-gray-800 text-xl sm:text-2xl font-bold leading-tight">
-          Irregulares
-          <div className="text-xs sm:text-sm font-normal -mt-1">de Baker Street</div>
-        </div>
+        <h1 className="text-xl font-semibold text-gray-800">Irregulares</h1>
         <button
           className="sm:hidden text-2xl text-gray-800"
           onClick={() => setOpen(!open)}

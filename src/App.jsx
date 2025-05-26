@@ -17,7 +17,6 @@ import DetalleEscritor from './pages/escritores/DetalleEscritor';
 const App = () => {
   return (
     <>
-      <Header />
       <Navbar />
       <Carrousel />
       <main className="p-4 pb-20 max-w-4xl mx-auto">
